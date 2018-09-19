@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E445C936D414B9EBA50BADF3 /* Pods_gitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAAB0636D566F4A33D4B02E /* Pods_gitTest.framework */; };
 		F2D90BCF21525EF800305A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D90BCE21525EF800305A87 /* AppDelegate.swift */; };
 		F2D90BD121525EF800305A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D90BD021525EF800305A87 /* ViewController.swift */; };
 		F2D90BD421525EF800305A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D90BD221525EF800305A87 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71D420906BEBE6499FED396C /* Pods-gitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-gitTest/Pods-gitTest.release.xcconfig"; sourceTree = "<group>"; };
+		7AB597722E84BE73C8D96615 /* Pods-gitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gitTest/Pods-gitTest.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAAB0636D566F4A33D4B02E /* Pods_gitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D90BCB21525EF800305A87 /* gitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D90BCE21525EF800305A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D90BD021525EF800305A87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E445C936D414B9EBA50BADF3 /* Pods_gitTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38EF3E3087859A4A6B9CA805 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AB597722E84BE73C8D96615 /* Pods-gitTest.debug.xcconfig */,
+				71D420906BEBE6499FED396C /* Pods-gitTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9B5DAEBD0FF3ACA17C6C232 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADAAB0636D566F4A33D4B02E /* Pods_gitTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2D90BC221525EF800305A87 = {
 			isa = PBXGroup;
 			children = (
 				F2D90BCD21525EF800305A87 /* gitTest */,
 				F2D90BCC21525EF800305A87 /* Products */,
+				38EF3E3087859A4A6B9CA805 /* Pods */,
+				C9B5DAEBD0FF3ACA17C6C232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2D90BE021525EF800305A87 /* Build configuration list for PBXNativeTarget "gitTest" */;
 			buildPhases = (
+				DE1DDF6848C9BC62D71DE273 /* [CP] Check Pods Manifest.lock */,
 				F2D90BC721525EF800305A87 /* Sources */,
 				F2D90BC821525EF800305A87 /* Frameworks */,
 				F2D90BC921525EF800305A87 /* Resources */,
+				413F6600D4D2639A081F170D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		413F6600D4D2639A081F170D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gitTest/Pods-gitTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gitTest/Pods-gitTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1DDF6848C9BC62D71DE273 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gitTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2D90BC721525EF800305A87 /* Sources */ = {
@@ -260,6 +331,7 @@
 		};
 		F2D90BE121525EF800305A87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB597722E84BE73C8D96615 /* Pods-gitTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = gitTest/Info.plist;
@@ -272,6 +344,7 @@
 		};
 		F2D90BE221525EF800305A87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D420906BEBE6499FED396C /* Pods-gitTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = gitTest/Info.plist;
